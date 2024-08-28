@@ -1,10 +1,25 @@
 import './App.css'
+import Card from './Card.jsx'
+import Navbar from './Navbar.jsx'
 
 function App() {
 
   return (
     <>
-      <h1>Say hello</h1>
+     <div className='navbar'>
+        <Navbar/>
+     </div>
+     <div className='product-lists'>
+        <Card>
+        </Card>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+        <Card/>
+      </div>
     </>
   )
 }
