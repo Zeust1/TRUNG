@@ -8,6 +8,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    z-index: 2;
 }
 
 
@@ -19,35 +20,91 @@
     align-items: center;
     justify-content: center;
     border: 1px solid black;
+    cursor: pointer;
+}
+
+
+.count-cart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.count-cart .count {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #FD006E;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.count-cart-details {
+    width: 300px;
+    min-height: 150px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: white;
+    z-index: 3;
+    border-radius: 10px 0 10px 10px;
+    position: absolute;
+    right: 70px;
+    top: 60px;
+    display: none;
+    padding: 30px;
+}
+
+
+.count-cart:hover .count-cart-details {
+    display: block;
+}
+
+
+.content {
+    min-height: 150px;
+    border-style: groove;
+    border-width: 1px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+
+.item {
+    border-style: groove;
+    border-width: 1px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 
 /* body */
 .product-lists {
     display: grid;
-    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 30px;
+    margin: 0 auto;
 }
 
 .product-card {
-    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: white;
     border-radius: 40px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     padding: 20px;
     cursor: pointer;
     position: relative;
-}
-
-
-.img-product {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #F2F2F2;
 }
 
 
@@ -94,6 +151,15 @@
 }
 
 
+.img-discout {
+    position: relative;
+    max-width: 200px;
+    max-width: 200px;
+    border-radius: 50%;
+    background-color: #F2F2F2;
+}
+
+
 .discountpercent {
     background-color: white;
     color: #0088FF;
@@ -105,6 +171,8 @@
     justify-content: center;
     position: absolute;
     top: 0;
-    left: 30px;
+    left:-30px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+
