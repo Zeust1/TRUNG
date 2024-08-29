@@ -1,8 +1,11 @@
-import { Children } from "react";
-import Navbar from "./Navbar.jsx";
-const ProductItems = [];
+import { useSelector, useDispatch } from 'react-redux'
+import { pushdata , selectCount} from "./app/pushdata";
+
 
 const Card = (props) => {
+
+  const dispatch = useDispatch()
+
   return (
     <>
       <div className="product-card">
@@ -26,19 +29,12 @@ const Card = (props) => {
           <h3 className="pricebefore">{props.beforediscount}</h3>
           <h3>{props.afterdiscount}</h3>
         </div>
-        <button
-          className="btn-addcard"
-          onClick={() => {
-            ProductItems.push({
-              discount: props.discount,
-              img: props.img,
-              title: props.title,
-              beforediscount: props.beforediscount,
-              afterdiscount: props.afterdiscount,
-            });
-            localStorage.setItem("items", JSON.stringify(ProductItems))
-            console.log(ProductItems);
-          }}
+        <button className="btn-addcard"
+          onClick={() => 
+            {
+              props.Detail(props)
+              dispatch(pushdata(props))
+            }}
         >
           <i className="fa-solid fa-cart-shopping"></i>
           Add to card
@@ -48,4 +44,4 @@ const Card = (props) => {
   );
 };
 
-export default { Card, ProductItems };
+export default  Card ;

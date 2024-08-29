@@ -70,7 +70,15 @@
 
 .content {
     width: 300px;
+    height: 400px;
+    overflow-y: scroll;
 }
+
+.content::-webkit-scrollbar {
+    width: 5px;
+    background-color: #FD006E;
+}
+
 
 .item {
     border-style: groove;
