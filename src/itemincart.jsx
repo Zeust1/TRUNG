@@ -1,9 +1,12 @@
 const items = (props) => {
     return (
         <>
-            <div className="item">
-                <img src={props.img} alt="img" style={{width: '40px', height: '40px'}}/>
-                <h4>{props.title}</h4>          
+            <div className="item" style={{display: "flex", justifyContent: "space-between"}}>
+                        <img src={props.items.img} alt="item" style={{width: "100px", height: "100px"}}/>
+                        <div>
+                             <h3>{props.items.title}</h3>
+                             <p>{props.items.afterdiscount}</p>
+                        </div>
             </div>
         </>
     )

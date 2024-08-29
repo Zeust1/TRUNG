@@ -12,14 +12,14 @@ const navbar = (props) => {
                     </div>
                     <div className="count-cart-details">
                         <div className="content">
-                            <Item 
-                            img ={JSON.parse(localStorage.getItem("items"))[0].img}
-                            title={JSON.parse(localStorage.getItem("items"))[0].title}
-                            
-                            
-                            
-                            
+                            <Item
+                                items = {localStorage.length ? JSON.parse(localStorage.getItem("items"))[0]: 'No data' }
                             />
+                                                        <Item
+                                items = {localStorage.length ? JSON.parse(localStorage.getItem("items"))[1]: 'No data' }
+                            />                            <Item
+                            items = {localStorage.length ? JSON.parse(localStorage.getItem("items"))[2]: 'No data' }
+                             />
                         </div>
                     </div>
                 </div>

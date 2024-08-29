@@ -69,21 +69,13 @@
 
 
 .content {
-    min-height: 150px;
-    border-style: groove;
-    border-width: 1px;
-    margin: 0 auto;
-    border-radius: 10px;
+    width: 300px;
 }
-
 
 .item {
     border-style: groove;
     border-width: 1px;
     padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 
