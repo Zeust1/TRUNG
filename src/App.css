@@ -75,7 +75,7 @@
 }
 
 .content::-webkit-scrollbar {
-    width: 5px;
+    width: 3px;
     background-color: #FD006E;
 }
 
